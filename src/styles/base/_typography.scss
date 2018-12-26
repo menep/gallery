@@ -1,0 +1,13 @@
+body {
+  font-family: $font-primary;
+  color: $color-primary;
+}
+
+.header {
+  &__heading {
+    font-weight: 100;
+    line-height: 2;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
