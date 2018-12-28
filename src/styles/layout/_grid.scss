@@ -27,82 +27,82 @@
     filter: grayscale(0%);
   }
 
-  &__001 {
+  &__000 {
     grid-column: 13/16;
     grid-row: 1/4;
+    background-image: url("./img/image__000.JPG");
+  }
+
+  &__001 {
+    grid-column: 7/13;
+    grid-row: 1/6;
     background-image: url("./img/image__001.JPG");
   }
 
   &__002 {
-    grid-column: 7/13;
-    grid-row: 1/6;
-    background-image: url("./img/image__002.JPG");
-  }
-
-  &__003 {
     grid-column: 6/13;
     grid-row: 6/11;
-    background-image: url("./img/image__003.JPG");
+    background-image: url("./img/image__002.JPG");
     background-position: bottom;
   }
 
-  &__004 {
+  &__003 {
     grid-column: 12/16;
     grid-row: 16/21;
+    background-image: url("./img/image__003.JPG");
+  }
+
+  &__004 {
+    grid-column: 13/16;
+    grid-row: 4/13;
     background-image: url("./img/image__004.JPG");
   }
 
   &__005 {
-    grid-column: 13/16;
-    grid-row: 4/13;
+    grid-column: 1/6;
+    grid-row: 10/15;
     background-image: url("./img/image__005.JPG");
   }
 
   &__006 {
-    grid-column: 1/6;
-    grid-row: 10/15;
+    grid-column: 1/4;
+    grid-row: 1/10;
     background-image: url("./img/image__006.JPG");
   }
 
   &__007 {
-    grid-column: 1/4;
-    grid-row: 1/10;
+    grid-column: 6/9;
+    grid-row: 11/16;
     background-image: url("./img/image__007.JPG");
   }
 
   &__008 {
-    grid-column: 6/9;
+    grid-column: 9/13;
     grid-row: 11/16;
     background-image: url("./img/image__008.JPG");
   }
 
   &__009 {
-    grid-column: 9/13;
-    grid-row: 11/16;
+    grid-column: 4/7;
+    grid-row: 1/6;
     background-image: url("./img/image__009.JPG");
   }
 
   &__010 {
-    grid-column: 4/7;
-    grid-row: 1/6;
+    grid-column: 13/16;
+    grid-row: 13/16;
     background-image: url("./img/image__010.JPG");
   }
 
   &__011 {
-    grid-column: 13/16;
-    grid-row: 13/16;
+    grid-column: 1/6;
+    grid-row: 15/21;
     background-image: url("./img/image__011.JPG");
   }
 
   &__012 {
-    grid-column: 1/6;
-    grid-row: 15/21;
-    background-image: url("./img/image__012.JPG");
-  }
-
-  &__013 {
     grid-column: 6/12;
     grid-row: 16/21;
-    background-image: url("./img/image__013.JPG");
+    background-image: url("./img/image__012.JPG");
   }
 }
