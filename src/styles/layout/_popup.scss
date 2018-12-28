@@ -13,9 +13,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50%;
-    display: flex;
+    width: 60%;
+    height: auto;
   }
 
   &__prev,
@@ -24,6 +23,19 @@
     border: none;
     color: $color-primary;
     width: 5rem;
+    height: 5rem;
+    align-self: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__prev {
+    left: -10%;
+  }
+  &__next {
+    right: -10%;
   }
 
   &__image {
