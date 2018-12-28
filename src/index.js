@@ -12,6 +12,7 @@ sel.imgs.forEach(img =>
     counter = e.target.dataset.num;
     const src = `./img/image__${counter}.JPG`;
     sel.popupImg.setAttribute("src", src);
+    document.body.classList.add("noscroll");
   })
 );
 
@@ -45,7 +46,6 @@ sel.next.addEventListener("click", () => {
   const src = `./img/image__${counterStr}.JPG`;
 
   sel.popupImg.setAttribute("src", src);
-  console.log(src);
 });
 
 window.addEventListener("keyup", e => {
@@ -53,5 +53,6 @@ window.addEventListener("keyup", e => {
     sel.popupCont.classList.remove("visible");
     sel.popupCont.classList.add("hidden");
     sel.popupImg.setAttribute("src", ""); // unset image
+    document.body.classList.remove("noscroll");
   }
 });
