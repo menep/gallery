@@ -1,0 +1,11 @@
+.hidden {
+  z-index: -1000;
+}
+
+.visible {
+  z-index: 1000;
+}
+
+.noscroll {
+  overflow: hidden;
+}

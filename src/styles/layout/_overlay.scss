@@ -1,4 +1,4 @@
-.popup {
+.overlay {
   &__container {
     position: fixed;
     top: 0;
@@ -45,14 +45,3 @@
   }
 }
 
-.hidden {
-  z-index: -1000;
-}
-
-.visible {
-  z-index: 1000;
-}
-
-.noscroll {
-  overflow: hidden;
-}

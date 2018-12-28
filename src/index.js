@@ -4,19 +4,19 @@ import sel from "./scripts/selectors";
 let counter;
 const imgCount = sel.imgs.length - 1;
 
-// attach event listener to each img to open popup
+// attach event listener to each img to open overlay
 sel.imgs.forEach(img =>
   img.addEventListener("click", e => {
-    sel.popupCont.classList.remove("hidden");
-    sel.popupCont.classList.add("visible");
+    sel.overlayCont.classList.remove("hidden");
+    sel.overlayCont.classList.add("visible");
     counter = e.target.dataset.num;
     const src = `./img/image__${counter}.JPG`;
-    sel.popupImg.setAttribute("src", src);
+    sel.overlayImg.setAttribute("src", src);
     document.body.classList.add("noscroll");
   })
 );
 
-// click on prev button loads previous image in popup
+// click on prev button loads previous image in overlay
 sel.prev.addEventListener("click", () => {
   --counter;
   if (counter < 0) counter = imgCount;
@@ -29,10 +29,10 @@ sel.prev.addEventListener("click", () => {
 
   const src = `./img/image__${counterStr}.JPG`;
 
-  sel.popupImg.setAttribute("src", src);
+  sel.overlayImg.setAttribute("src", src);
 });
 
-// click on prev button loads next image in popup
+// click on prev button loads next image in overlay
 sel.next.addEventListener("click", () => {
   ++counter;
   if (counter > imgCount) counter = 0;
@@ -45,14 +45,14 @@ sel.next.addEventListener("click", () => {
 
   const src = `./img/image__${counterStr}.JPG`;
 
-  sel.popupImg.setAttribute("src", src);
+  sel.overlayImg.setAttribute("src", src);
 });
 
 window.addEventListener("keyup", e => {
   if (e.key === "Escape") {
-    sel.popupCont.classList.remove("visible");
-    sel.popupCont.classList.add("hidden");
-    sel.popupImg.setAttribute("src", ""); // unset image
+    sel.overlayCont.classList.remove("visible");
+    sel.overlayCont.classList.add("hidden");
+    sel.overlayImg.setAttribute("src", ""); // unset image
     document.body.classList.remove("noscroll");
   }
 });

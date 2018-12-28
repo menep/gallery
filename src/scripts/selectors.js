@@ -1,9 +1,9 @@
 const sel = {
   imgs: document.querySelectorAll(".image"),
-  popupCont: document.querySelector(".popup__container"),
-  popupImg: document.querySelector(".popup__image"),
-  prev: document.querySelector(".popup__prev"),
-  next: document.querySelector(".popup__next")
+  overlayCont: document.querySelector(".overlay__container"),
+  overlayImg: document.querySelector(".overlay__image"),
+  prev: document.querySelector(".overlay__prev"),
+  next: document.querySelector(".overlay__next")
 };
 
 export default sel;
