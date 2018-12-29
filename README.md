@@ -7,7 +7,7 @@ I've wanted to create a gallery to display some of my photos for a while, so her
 ## Project status
 
 The grid and the carousel are complete.
-There are some issues to fix (JS refactor, using arrows for navigation, correct visualization of vertical images).
+There are some issues to fix (JS refactor, using arrows for navigation, only clicking esc allows to return to the gallery from the overlay, correct visualization of vertical images).
 
 ## How to use
 
