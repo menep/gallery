@@ -4,7 +4,7 @@
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(20, 50px);
     grid-gap: 1rem;
-    padding: 2rem 2rem 1rem;
+    padding: 1rem 1rem;
     background-color: $color-secondary;
     position: relative;
   }
@@ -14,6 +14,8 @@
   &__container {
     grid-column: 4/6;
     grid-row: 6/10;
+    display: flex;
+    justify-content: center;
   }
 }
 

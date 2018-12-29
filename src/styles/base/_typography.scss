@@ -5,9 +5,9 @@ body {
 
 .header {
   &__heading {
-    font-weight: 100;
-    line-height: 2;
-    text-align: center;
     text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 2rem;
   }
 }
