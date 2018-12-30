@@ -1,5 +1,7 @@
 # CSS Very Scottish Gallery
 
+![alt text](./screenshots/home.jpeg?raw=true)
+
 ## Motivation
 
 I've wanted to create a gallery to display some of my photos for a while, so here it is! It has been build with CSS Grid.
@@ -25,9 +27,6 @@ yarn install
 
 yarn start
 
-## Screenshots
-
-![alt text](./screenshots/home.jpeg?raw=true)
 
 ## Known issues
 
