@@ -26,17 +26,23 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g)/i,
+        test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {
-            loader: "url-loader",
+            loader: "file-loader",
             options: {
-              name: "./img/[name].[ext]",
-              limit: 10000
+              name: 'img/[name].[ext]',
             }
           },
+
           {
-            loader: "img-loader"
+            loader: "image-webpack-loader",
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65
+              }
+            }
           }
         ]
       }
