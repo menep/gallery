@@ -9,11 +9,11 @@ I've wanted to create a gallery to display some of my photos for a while, so her
 ## Project status
 
 The grid and the carousel are complete.
-There are some issues to fix (JS refactor, using arrows for navigation, only clicking esc allows to return to the gallery from the overlay, correct visualization of vertical images).
+There are some issues to fix (JS refactor, only clicking esc allows to return to the gallery from the overlay).
 
 ## How to use
 
-Hovering over an image shows its color version, clicking on it open an overlay to see it in a bigger size. Clicking on the arrows allows you to navigate the photos.
+Hovering over an image shows its color version, clicking on it open an overlay to see it in a bigger size. You can navigate the photos clicking on the UI or the keyboard arrows.
 
 ## Practiced features
 
@@ -27,11 +27,9 @@ yarn install
 
 yarn start
 
-
 ## Known issues
 
-Vertical images are not correctly visualized in the overlay.
-JS code is currently messy.
+JS files need to be refactored.
 
 ## Images
 
