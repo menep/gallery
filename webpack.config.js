@@ -47,6 +47,7 @@ module.exports = {
       }
     ]
   },
+  devtool: "inline-cheap-source-map",
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",

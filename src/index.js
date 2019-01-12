@@ -1,29 +1,31 @@
 import "./styles/main.scss";
 import sel from "./scripts/selectors";
+import {
+  showPreviousPhoto,
+  showNextPhoto,
+  openOverlay
+} from "./scripts/eventFunctions";
 
-let counter;
-const imgCount = sel.imgs.length - 1;
+const photoData = {
+  currentPhotoNumber: 0,
+  totalImageCount: sel.imgs.length - 1
+};
 
 // attach event listener to each img to open overlay
 sel.imgs.forEach(img =>
   img.addEventListener("click", e => {
-    sel.overlayCont.classList.remove("hidden");
-    sel.overlayCont.classList.add("visible");
-    counter = e.target.dataset.num;
-    const src = `./img/image__${counter}.JPG`;
-    sel.overlayImg.setAttribute("src", src);
-    document.body.classList.add("noscroll");
+    openOverlay(e, photoData);
   })
 );
 
 // click on prev button loads previous image in overlay
 sel.prev.addEventListener("click", () => {
-  showPreviousPhoto();
+  showPreviousPhoto(photoData);
 });
 
 // click on prev button loads next image in overlay
 sel.next.addEventListener("click", () => {
-  showNextPhoto();
+  showNextPhoto(photoData);
 });
 
 window.addEventListener("keyup", e => {
@@ -35,42 +37,12 @@ window.addEventListener("keyup", e => {
   }
   if (e.key === "ArrowLeft") {
     if (sel.overlayCont.classList.contains("visible")) {
-      showPreviousPhoto();
+      showPreviousPhoto(photoData);
     }
   }
   if (e.key === "ArrowRight") {
     if (sel.overlayCont.classList.contains("visible")) {
-      showNextPhoto();
+      showNextPhoto(photoData);
     }
   }
 });
-
-const showPreviousPhoto = () => {
-  --counter;
-  if (counter < 0) counter = imgCount;
-  let counterStr;
-  if (counter >= 0 && counter <= 9) {
-    counterStr = `00${counter}`;
-  } else if (counter >= 10 && counter <= 99) {
-    counterStr = `0${counter}`;
-  }
-
-  const src = `./img/image__${counterStr}.JPG`;
-
-  sel.overlayImg.setAttribute("src", src);
-};
-
-const showNextPhoto = () => {
-  ++counter;
-  if (counter > imgCount) counter = 0;
-  let counterStr;
-  if (counter >= 0 && counter <= 9) {
-    counterStr = `00${counter}`;
-  } else if (counter >= 10 && counter <= 99) {
-    counterStr = `0${counter}`;
-  }
-
-  const src = `./img/image__${counterStr}.JPG`;
-
-  sel.overlayImg.setAttribute("src", src);
-};
