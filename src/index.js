@@ -18,6 +18,34 @@ sel.imgs.forEach(img =>
 
 // click on prev button loads previous image in overlay
 sel.prev.addEventListener("click", () => {
+  showPreviousPhoto();
+});
+
+// click on prev button loads next image in overlay
+sel.next.addEventListener("click", () => {
+  showNextPhoto();
+});
+
+window.addEventListener("keyup", e => {
+  if (e.key === "Escape") {
+    sel.overlayCont.classList.remove("visible");
+    sel.overlayCont.classList.add("hidden");
+    sel.overlayImg.setAttribute("src", ""); // unset image
+    document.body.classList.remove("noscroll");
+  }
+  if (e.key === "ArrowLeft") {
+    if (sel.overlayCont.classList.contains("visible")) {
+      showPreviousPhoto();
+    }
+  }
+  if (e.key === "ArrowRight") {
+    if (sel.overlayCont.classList.contains("visible")) {
+      showNextPhoto();
+    }
+  }
+});
+
+const showPreviousPhoto = () => {
   --counter;
   if (counter < 0) counter = imgCount;
   let counterStr;
@@ -30,10 +58,9 @@ sel.prev.addEventListener("click", () => {
   const src = `./img/image__${counterStr}.JPG`;
 
   sel.overlayImg.setAttribute("src", src);
-});
+};
 
-// click on prev button loads next image in overlay
-sel.next.addEventListener("click", () => {
+const showNextPhoto = () => {
   ++counter;
   if (counter > imgCount) counter = 0;
   let counterStr;
@@ -46,45 +73,4 @@ sel.next.addEventListener("click", () => {
   const src = `./img/image__${counterStr}.JPG`;
 
   sel.overlayImg.setAttribute("src", src);
-});
-
-window.addEventListener("keyup", e => {
-  if (e.key === "Escape") {
-    sel.overlayCont.classList.remove("visible");
-    sel.overlayCont.classList.add("hidden");
-    sel.overlayImg.setAttribute("src", ""); // unset image
-    document.body.classList.remove("noscroll");
-  }
-  if (e.key === "ArrowLeft") {
-    if (sel.overlayCont.classList.contains("visible")) {
-      --counter;
-      if (counter < 0) counter = imgCount;
-      let counterStr;
-      if (counter >= 0 && counter <= 9) {
-        counterStr = `00${counter}`;
-      } else if (counter >= 10 && counter <= 99) {
-        counterStr = `0${counter}`;
-      }
-
-      const src = `./img/image__${counterStr}.JPG`;
-
-      sel.overlayImg.setAttribute("src", src);
-    }
-  }
-  if (e.key === "ArrowRight") {
-    if (sel.overlayCont.classList.contains("visible")) {
-      ++counter;
-      if (counter > imgCount) counter = 0;
-      let counterStr;
-      if (counter >= 0 && counter <= 9) {
-        counterStr = `00${counter}`;
-      } else if (counter >= 10 && counter <= 99) {
-        counterStr = `0${counter}`;
-      }
-
-      const src = `./img/image__${counterStr}.JPG`;
-
-      sel.overlayImg.setAttribute("src", src);
-    }
-  }
-});
+};
