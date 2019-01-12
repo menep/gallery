@@ -40,4 +40,11 @@ const openOverlay = (e, data) => {
   document.body.classList.add("noscroll");
 };
 
-export { showPreviousPhoto, showNextPhoto, openOverlay };
+const hideOverlay = () => {
+  sel.overlayCont.classList.remove("visible");
+  sel.overlayCont.classList.add("hidden");
+  sel.overlayImg.setAttribute("src", ""); // unset image
+  document.body.classList.remove("noscroll");
+}
+
+export { showPreviousPhoto, showNextPhoto, openOverlay, hideOverlay };
