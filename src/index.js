@@ -28,6 +28,12 @@ const initEventListeners = () => {
     showNextPhoto(photoData);
   });
 
+  sel.overlayCont.addEventListener("click", (e) => {
+    if (e.target.classList.contains("overlay__container")) {
+      hideOverlay();
+    }
+  })
+
   window.addEventListener("keyup", e => {
     if (e.key === "Escape") {
       hideOverlay();
