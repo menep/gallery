@@ -4,7 +4,7 @@ import {
   showPreviousPhoto,
   showNextPhoto,
   openOverlay,
-  hideOverlay
+  closeOverlay
 } from "./scripts/eventFunctions";
 
 const photoData = {
@@ -30,13 +30,13 @@ const initEventListeners = () => {
 
   sel.overlayCont.addEventListener("click", (e) => {
     if (e.target.classList.contains("overlay__container")) {
-      hideOverlay();
+      closeOverlay();
     }
   })
 
   window.addEventListener("keyup", e => {
     if (e.key === "Escape") {
-      hideOverlay();
+      closeOverlay();
     }
     if (e.key === "ArrowLeft") {
       if (sel.overlayCont.classList.contains("visible")) {
