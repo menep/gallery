@@ -8,8 +8,8 @@ I've wanted to create a gallery to display some of my photos for a while, so her
 
 ## Project status
 
-The grid and the carousel are complete.
-There are some issues to fix (JS refactor, only clicking esc allows to return to the gallery from the overlay).
+Basic functionality is working (photo display and carousel).
+More photos will be added and maybe the grid will be randomized. Performance issues will be addressed too (images are too big, will probably experiment with sprites).
 
 ## How to use
 
@@ -18,6 +18,7 @@ Hovering over an image shows its color version, clicking on it open an overlay t
 ## Practiced features
 
 - CSS Grid
+- Webpack configuration from scratch
 
 ## Setup
 
@@ -29,7 +30,7 @@ yarn start
 
 ## Known issues
 
-JS files need to be refactored.
+Images are too heavy, Sass/JS are not tidy.
 
 ## Images
 
