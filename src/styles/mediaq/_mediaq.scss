@@ -65,24 +65,4 @@
       grid-row: 15/18;
     }
   }
-
-  .overlay {
-    &__frame {
-      width: 95%;
-    }
-
-    &__prev,
-    &__next {
-      top: 100%;
-    }
-
-    &__prev {
-      left: 40%;
-      transform: translateX(-50%)
-    }
-    &__next {
-      right: 40%;
-      transform: translateX(50%)
-    }
-  }
 }
