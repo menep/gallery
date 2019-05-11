@@ -1,11 +1,11 @@
-import './styles/main.scss';
-import sel from './scripts/selectors';
+import './src/assets/styles/main.scss';
+import sel from './src/scripts/selectors';
 import {
 	showPreviousPhoto,
 	showNextPhoto,
 	openOverlay,
 	closeOverlay,
-} from './scripts/eventFunctions';
+} from './src/scripts/eventFunctions';
 
 const photoData = {
 	currentPhotoNumber: 0,
