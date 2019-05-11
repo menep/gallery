@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	context: path.resolve(__dirname, 'app'),
@@ -31,7 +32,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: 'img/[name].[ext]',
+							name: 'img/[folder]/[name].[ext]',
 						},
 					},
 					{
@@ -56,5 +57,8 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './index.html',
 		}),
+		new CopyPlugin([
+			{ from: './src/assets/imgs/highres', to: './img/highres/' },
+		]),
 	],
 };

@@ -15,10 +15,9 @@
 	}
 
 	&__image {
+		max-height: 100%;
 		position: relative;
 		left: 50%;
-		height: auto;
-		max-width: 100%;
 		transform: translateX(-50%);
 	}
 
