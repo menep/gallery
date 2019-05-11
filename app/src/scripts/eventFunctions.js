@@ -11,7 +11,7 @@ const showPreviousPhoto = data => {
 		counterStr = `0${data.currentPhotoNumber}`;
 	}
 
-	const src = `./img/image__${counterStr}.JPG`;
+	const src = `./img/highres/scotland_highres_${counterStr}.JPG`;
 	sel.overlayImg.setAttribute('src', src);
 };
 
@@ -26,7 +26,7 @@ const showNextPhoto = data => {
 		counterStr = `0${data.currentPhotoNumber}`;
 	}
 
-	const src = `./img/image__${counterStr}.JPG`;
+	const src = `./img/highres/scotland_highres_${counterStr}.JPG`;
 
 	sel.overlayImg.setAttribute('src', src);
 };
@@ -35,7 +35,7 @@ const openOverlay = (e, data) => {
 	sel.overlayCont.classList.remove('hidden');
 	sel.overlayCont.classList.add('visible');
 	data.currentPhotoNumber = e.target.dataset.num;
-	const src = `./img/image__${data.currentPhotoNumber}.JPG`;
+	const src = `./img/highres/scotland_highres_${data.currentPhotoNumber}.JPG`;
 	sel.overlayImg.setAttribute('src', src);
 	document.body.classList.add('noscroll');
 };
