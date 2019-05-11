@@ -1,49 +1,45 @@
 .overlay {
-  &__container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: $color-secondary-opaque;
-  }
+	&__container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: $color-secondary-opaque;
+	}
 
-  &__frame {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-  }
+	&__container-image {
+		width: 90%;
+		height: 85%;
+		margin: 10px auto;
+	}
 
-  &__image {
-    width: auto;
-    max-width: 100%;
-    max-height: 50rem;
-    margin: 0 auto;
-    display: block;
-  }
+	&__image {
+		position: relative;
+		left: 50%;
+		height: auto;
+		max-width: 100%;
+		transform: translateX(-50%);
+	}
 
+	&__container-buttons {
+		height: 15%;
+		display: flex;
+		justify-content: center;
+	}
 
-  &__prev,
-  &__next {
-    background-color: inherit;
-    border: none;
-    color: $color-primary;
-    width: 5rem;
-    height: 5rem;
-    align-self: center;
+	&__button-prev,
+	&__button-next {
+		background-color: inherit;
+		border: none;
+		color: $color-primary;
+		width: 5rem;
+		height: 5rem;
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+	}
 
-  &__prev {
-    left: -10%;
-  }
-  &__next {
-    right: -10%;
-  }
-
+	&__button-prev {
+	}
+	&__button-next {
+	}
 }
