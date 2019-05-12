@@ -32,6 +32,7 @@ yarn start
 
 ## Known issues
 
+Low res grid is messed up. It will stay like that for a while.
 Images are too heavy, Sass/JS are not tidy.
 
 ## Images
