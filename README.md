@@ -9,7 +9,7 @@ I've wanted to create a gallery to display some of my photos for a while, so her
 ## Project status
 
 Basic functionality is working (photo display and carousel).
-More photos will be added and maybe the grid will be randomized.
+The grid might be randomized.
 Performance issues will be addressed too (remove exif, images are too heavy, will probably experiment with sprites, lazy loading).
 I might eventually create a NodeJS server with a database and an api with info about the photos.
 
