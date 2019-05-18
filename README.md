@@ -9,7 +9,7 @@ I've wanted to create a gallery to display some of my photos for a while, so her
 ## Project status
 
 Basic functionality is working (photo display, carousel, responsive grid).
-
+Images lazy load (implemented with IntersectionObserver API).
 
 ## How to use
 
@@ -19,20 +19,18 @@ Hovering over an image shows its color version, clicking on it open an overlay t
 
 - CSS Grid
 - Webpack configuration from scratch
+- Lazy loading images with IntersectionObserver API
 
-## Setup
+## How to run locally
 
 yarn install
-
-## How to run
-
 yarn start
 
 ## Known issues and future features
 
 Images are too heavy, Sass/JS are not tidy.
 The grid randomization functionality might be a feature in the future.
-Performance issues will be addressed too (remove exif, images are too heavy, will probably experiment with sprites, lazy loading).
+Performance issues will be addressed too (remove exif, images are too heavy, will probably experiment with sprites).
 I might eventually create a NodeJS server with a database and an api with info about the photos.
 
 ## Images
