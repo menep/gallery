@@ -59,6 +59,7 @@ module.exports = {
 		}),
 		new CopyPlugin([
 			{ from: './src/assets/imgs/highres', to: './img/highres/' },
+			{ from: './src/assets/imgs/lowres', to: './img/lowres/' },
 		]),
 	],
 };
