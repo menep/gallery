@@ -1,66 +1,99 @@
 @media (max-width: 1300px) {
-  .header {
-    &__container {
-      grid-column: 1/16;
-      grid-row: 1/2;
-      display: flex;
-    }
+	.app {
+		&__container {
+			grid-template-rows: repeat(39, 50px);
+		}
+	}
+	.header {
+		&__container {
+			grid-column: 1/16;
+			grid-row: 1/2;
+			display: flex;
+		}
 
-    &__heading {
-      text-orientation: initial;
-      writing-mode: initial;
-    }
-  }
+		&__heading {
+			text-orientation: initial;
+			writing-mode: initial;
+		}
+	}
 
-  .image {
-    &__000 {
-      grid-column: 12/16;
-      grid-row: 2/6;
-    }
-    &__001 {
-      grid-column: 5/12;
-      grid-row: 6/10;
-    }
-    &__002 {
-      grid-column: 6/12;
-      grid-row: 10/14;
-    }
-    &__003 {
-      grid-column: 5/11;
-      grid-row: 18/21;
-    }
-    &__004 {
-      grid-column: 12/16;
-      grid-row: 6/12;
-    }
-    &__005 {
-    }
-    &__006 {
-      grid-column: 1/5;
-      grid-row: 2/7;
-    }
-    &__007 {
-      grid-column: 1/5;
-      grid-row: 7/10;
-    }
-    &__008 {
-      grid-column: 11/16;
-      grid-row: 15/21;
-    }
-    &__009 {
-      grid-column: 5/12;
-      grid-row: 2/6;
-    }
-    &__010 {
-      grid-column: 12/16;
-      grid-row: 12/15;
-    }
-    &__011 {
-      grid-column: 1/5;
-    }
-    &__012 {
-      grid-column: 5/11;
-      grid-row: 15/18;
-    }
-  }
+	.image {
+		&__000 {
+			grid-column: 12/16;
+			grid-row: 2/6;
+		}
+		&__001 {
+			grid-column: 5/12;
+			grid-row: 6/10;
+		}
+		&__002 {
+			grid-column: 6/12;
+			grid-row: 10/15;
+		}
+		&__003 {
+			grid-column: 5/11;
+			grid-row: 18/21;
+		}
+		&__004 {
+			grid-column: 12/16;
+			grid-row: 6/12;
+		}
+		&__005 {
+			grid-column: 1/6;
+			grid-row: 10/15;
+		}
+		&__006 {
+			grid-column: 1/5;
+			grid-row: 2/7;
+		}
+		&__007 {
+			grid-column: 1/5;
+			grid-row: 7/10;
+		}
+		&__008 {
+			grid-column: 11/16;
+			grid-row: 15/21;
+		}
+		&__009 {
+			grid-column: 5/12;
+			grid-row: 2/6;
+		}
+		&__010 {
+			grid-column: 12/16;
+			grid-row: 12/15;
+		}
+		&__011 {
+			grid-column: 1/5;
+			grid-row: 15/21;
+		}
+		&__012 {
+			grid-column: 5/11;
+			grid-row: 15/18;
+		}
+		&__013 {
+			grid-column: 1/10;
+			grid-row: 21/25;
+		}
+		&__014 {
+			grid-column: 1/9;
+		}
+		&__015{
+			grid-row: 21/25;
+		}
+		&__016 {
+			grid-row: 25/30;
+		}
+		&__018 {
+			grid-column: 6/16;
+			grid-row: 30/35;
+		}
+		&__020 {
+			grid-row: 25/30;
+			grid-column: 11/16;
+		}
+		&__021 {
+			grid-row: 25/30;
+			grid-column: 6/11;
+		}
+	}
 }
