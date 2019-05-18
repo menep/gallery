@@ -5,6 +5,7 @@ import {
 	showNextPhoto,
 	openOverlay,
 	closeOverlay,
+	imgLazyLoading,
 } from './src/scripts/eventFunctions';
 
 const photoData = {
@@ -13,6 +14,8 @@ const photoData = {
 };
 
 const initEventListeners = () => {
+	imgLazyLoading();
+
 	// attach event listener to each img to open overlay
 	sel.imgs.forEach(img =>
 		img.addEventListener('click', e => {

@@ -47,4 +47,37 @@ const closeOverlay = () => {
 	document.body.classList.remove('noscroll');
 };
 
-export { showPreviousPhoto, showNextPhoto, openOverlay, closeOverlay };
+const imgLazyLoading = () => {
+	const images = document.querySelectorAll('.image');
+
+	const config = {
+		rootMargin: '0px 0px 50px 0px',
+		threshold: 0,
+	};
+
+	let observer = new IntersectionObserver(function(entries, self) {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				preloadImage(entry.target);
+				self.unobserve(entry.target);
+			}
+		});
+	}, config);
+
+	images.forEach(image => {
+		observer.observe(image);
+	});
+};
+
+const preloadImage = img => {
+	const number = img.getAttribute('data-num');
+	img.style.backgroundImage = `url(./img/lowres/scotland_lowres_${number}.JPG)`;
+};
+
+export {
+	showPreviousPhoto,
+	showNextPhoto,
+	openOverlay,
+	closeOverlay,
+	imgLazyLoading,
+};
